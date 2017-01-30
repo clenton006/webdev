@@ -1,0 +1,12 @@
+@mixin background($color){
+    background: $color;
+}
+@mixin color($color){
+    color: $color;
+}
+@mixin centerText(){
+    text-align: center;
+}
+@mixin noUnderline(){
+    text-decoration: none;
+}

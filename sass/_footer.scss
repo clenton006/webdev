@@ -1,0 +1,89 @@
+footer {
+    height:250px;
+    display: flex;
+	@include background($primaryDark);
+    margin-bottom: 20px;
+	border-radius: 5px;
+}
+.border{
+    border-right-color: #AAAAAA;
+    border-right-style: solid;
+    border-right-width: thin;
+}
+.align{
+    float: left;
+    width: 33%;
+    margin: 20px 0;
+}
+.contact{
+    @extend .border;
+    @extend .align;
+    @include background($primaryDark);
+    @include color($primaryColour);
+    & a{
+        @include noUnderline();
+    }
+    & li{
+        @include centerText();
+        display: block;
+    }
+    & ul{
+        margin-left: $footerMargin;
+        line-height: $contentLineHeight;
+    }
+}
+.break{
+    display: none;
+}
+.break-2{
+    display: none;
+}
+.sitemap{
+    @extend .align;
+    @extend .border;
+    width: 34%;
+    @include centerText();
+    margin: 20 0 20 0;
+    @include background($primaryDark);
+    @include color($primaryColour);
+    & a{
+        @include centerText();
+        @include noUnderline();
+        @include color($primaryColour);
+    }
+    & li{
+        display: block;
+    }
+    & ul{
+        margin-left: $footerMargin;
+        line-height: $contentLineHeight;
+    }
+}
+.social{
+    @extend .align;
+    float: right;
+    @include background($primaryDark);
+    @include color($primaryColour);
+    padding-bottom: 20px;
+    & a{
+        @include noUnderline();
+    }
+    & li{
+        display: block;
+        margin-bottom: 20px;
+    }
+    & ul{
+        padding-right: 2%;
+        @include centerText();
+        line-height: $contentLineHeight;
+         margin-left: $footerMargin;
+    }
+    & i{
+        width: 23%;
+        margin: 0 5% 0 5%;
+        @include centerText();
+        float: left;
+        font-size: 3em;
+        @include color($primaryColour);
+    }
+}

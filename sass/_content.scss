@@ -1,0 +1,54 @@
+.hero {
+    width: $siteWidth;
+    height: 600px;
+    background-image: linear-gradient(135deg, rgba(0,0,0,.9), rgba(0,0,0,.1)), url(../img/xksrpuh0vzo-yvonne-lee-harijanto.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+.description-container{
+    display: inline-block;
+    padding-top: 150px;
+    margin-left: 125px;
+    width: 500px;
+    @include color($primaryLight);
+    & h1{
+        font-size: 3em;
+        margin: $defaultMargin;
+    }
+    & p{
+        font-size: 1.2em;
+    }
+    & a{
+        @include background($primaryDark);
+        padding: 10px 20px;
+        @include noUnderline();
+        font-size:1.2em;
+        @include color($primaryLight);
+    }
+}
+main {
+    padding: 10px 0;
+    width: $siteWidth;
+    @include background($primaryLight);
+}
+.primary{
+    @include background($box-1);
+    padding: 15px;
+    border-radius: 20px;
+    @include color($primaryDark);
+}
+.secondary{
+    @include background($box-2);
+    padding: 15px;
+    border-radius: 20px;
+    @include color($primaryDark);
+    & ul{
+        margin: $defaultMargin 30%;
+        line-height: $contentLineHeight;
+    }
+    & li{
+        list-style:georgian;
+        @include color($primaryDark);
+    }
+}

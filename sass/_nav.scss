@@ -1,0 +1,43 @@
+nav {
+    height: $navSize;
+    width: $siteWidth;
+    @include background($primaryDark);
+}
+.logo-container{
+    display: inline-block;
+    margin: $defaultMargin;
+    height: $navSize;
+    width: $navSize;
+    line-height: $navSize;
+    padding: 10px 0 10px 20px;
+    & a{
+        @include color($logoColour);
+    }
+    & i{
+        font-size: 60px;
+        font-weight: bold;
+    }
+}
+.menu-container{
+    vertical-align: top;
+    float: right;
+    height: $navSize;
+    & ul{
+        margin: $defaultMargin;
+        float: right;
+    }
+    & li{
+        padding: 0 15px;
+        display: inline-block;
+        line-height: $navSize;
+        font-size: 1.3em;
+    }
+    & li:hover{
+        background-color: rgba(255,255,255,.1);
+        @include color($primaryColour);
+    }
+    & a{
+        @include noUnderline();
+        @include color($primaryLight);
+    }
+}
